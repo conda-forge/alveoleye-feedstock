@@ -35,6 +35,7 @@ requirements:
     - matplotlib-base
     - opencv
     - pydantic >=2.7.4
+    - typeguard
 
 test:
   imports:
