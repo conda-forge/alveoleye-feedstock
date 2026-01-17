@@ -6,6 +6,7 @@ azure:
 noarch_platforms:
 - linux_64
 - osx_64
+- osx_arm64
 - win_64
 github:
   branch_name: main
