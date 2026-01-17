@@ -1,5 +1,5 @@
 {% set name = "AlveolEye" %}
-{% set version = "0.1.5" %}
+{% set version = "0.1.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/SucreLab/AlveolEye/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 5aece6c5a283bbfb0baab04a69a96ae6837fc29d1b6803cd9bb18b7cd89bed5d
+  sha256: 4375d5276a2440dc271bc456d7a855c7fae9d348a3c0db8c33daf878cfaa74ed
 
 build:
   number: 0
@@ -35,6 +35,7 @@ requirements:
     - matplotlib-base
     - opencv
     - pydantic >=2.7.4
+    - typeguard
 
 test:
   imports:
