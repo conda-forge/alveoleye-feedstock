@@ -34,7 +34,7 @@ requirements:
     - qtpy
     - pillow >=10.2.0
     - gdown
-    - numpy <2.0.0
+    - numpy
     - matplotlib-base
     - opencv
     - pydantic >=2.7.4
