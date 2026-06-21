@@ -1,5 +1,5 @@
 {% set name = "AlveolEye" %}
-{% set version = "0.1.7" %}
+{% set version = "0.1.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,16 @@ package:
 
 source:
   url: https://github.com/SucreLab/AlveolEye/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 4375d5276a2440dc271bc456d7a855c7fae9d348a3c0db8c33daf878cfaa74ed
+  sha256: a29ffdcd057f3181a4a61df8b9df15c2f549ed22f39292bb3907c77fde02f270
 
 build:
   number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-
+  entry_points:
+      - alveoleye-train = alveoleye.lungcv.mrcnn.cli:train
+      - alveoleye-optimal-size = alveoleye.paper_scripts.optimal_training_size:main
+      
 requirements:
   host:
     - python {{ python_min }}
@@ -31,7 +34,7 @@ requirements:
     - qtpy
     - pillow >=10.2.0
     - gdown
-    - numpy <2.0.0
+    - numpy
     - matplotlib-base
     - opencv
     - pydantic >=2.7.4
